@@ -2272,7 +2272,7 @@ strong, .bold {
 .post_caption_cnt {
   vertical-align: middle;
   display: table-cell;
-  padding: 10px 30px;
+  padding: 10px 15px;
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .post_caption_cnt {
@@ -2935,6 +2935,11 @@ footer .copyright {
 /*========================================================
                      CUSTOM Styles
 =========================================================*/
+.footer-cta {
+    color: #fff;
+    background-color: #17376E;
+    padding: 20px 0;
+}
 
 .contact-form.inset-2.pull-left.pull-md-none.cbp-so-side.cbp-so-side-left.form-topo {
     width: 100%;

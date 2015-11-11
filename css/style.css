@@ -2935,6 +2935,21 @@ footer .copyright {
 /*========================================================
                      CUSTOM Styles
 =========================================================*/
+
+.text-secondary-1.highlight-text {
+    color: #fff;
+    font-weight: 900;
+}
+
+.highlight {
+    width: 100%;
+    background-color: #17376E;
+    padding: 10px;
+    margin-bottom: -15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .footer-cta {
     color: #fff;
     background-color: #17376E;
@@ -3029,4 +3044,4 @@ h2, .heading-2 {
     line-height: 0px;
 }
 
-  }
+}

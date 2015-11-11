@@ -1,0 +1,694 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/touch-touch.css"/>
+    <link rel="stylesheet" href="css/mailform.css"/>
+    <link rel="stylesheet" href="css/google-map.css"/>
+
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+
+    <!--[if lt IE 9]>
+    <html class="lt-ie9">
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src='js/device.min.js'></script>
+</head>
+<body>
+<div class="page cbp-so-scroller" id="cbp-so-scroller">
+    <!--========================================================
+                              HEADER
+    =========================================================-->
+    <header class="parallax" data-mobile="true" id="home">
+        <div id="stuck_container" class="stuck_container">
+            <div class="header-top">
+                <div class="container">
+                    <!--Brand-->
+                    <div class="brand">
+                        <h1 class="brand_name">
+                            <a href="./"><img src="images/logo.png" alt=""></a>
+                        </h1>
+                    </div>
+                    <!--End Brand-->
+
+                    <nav class="nav">
+                        <!--sf-menu-->
+                        <ul class="sf-menu" data-type="navbar">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#classes">Cursos e Formações</a>
+                            </li>
+                            <li>
+                                <a href="#events">Calendário </a>
+                            </li>
+                            <li>
+                                <a href="http://www.trainning.com.br/">Ir para o Site Trainning</a>
+                            </li>
+                        </ul>
+                        <!--end sf-menu-->
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom cbp-so-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-sm-9 cbp-so-side cbp-so-side-left text-xs-center">
+                        <h2 class="text-contrast">Black Friday <span class="small-txt"> Cursos Trainning</span></h2>
+                        <div class="logos">
+                        	<img class="logo-img" src="images/logo-curso-sap-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-java-trainning.jpg">
+                       		<img class="logo-img" src="images/logo-curso-itil-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-iphone-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-excel-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-cobit-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-ccna-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-bpmn-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-ati-trainning.jpg">
+                        	<img class="logo-img" src="images/logo-curso-android-trainning.jpg">
+                        </div>
+                        <a href="http://www.trainning.com.br/black-friday-2015.php" class="btn btn-md btn-primary">Saiba Mais</a>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-sm-9 cbp-so-side cbp-so-side-left text-xs-center">
+                       
+
+                         <div class="contact-form inset-2 pull-left pull-md-none cbp-so-side cbp-so-side-left form-topo">
+                    <h3 class="text-contrast">Até <span class="destaque"> 60%</span> de Desconto</h3>
+
+                    <p class="text-secondary-1">Informe os dados abaixo para participar da promoção</p>
+                    <!--RD Mailform-->
+                    <form class='mailform' method="post" action="bat/rd-mailform.php">
+                        <input type="hidden" name="form-type" value="contact"/>
+                        <fieldset>
+                            <label data-add-placeholder="">
+                                <input type="text"
+                                       name="name"
+                                       placeholder="Nome"
+                                       data-constraints="@LettersOnly @NotEmpty"/>
+                            </label>
+
+                            <label data-add-placeholder="">
+                                <input type="text"
+                                       name="email"
+                                       placeholder="E-mail"
+                                       data-constraints="@Email @NotEmpty"/>
+                            </label>
+
+                            <label class="phone" data-add-placeholder="">
+                                <input type="text"
+                                       name="phone"
+                                       placeholder="Telefone"
+                                       data-constraints="@Phone"/>
+                            </label>
+
+                            <label class="textarea" data-add-placeholder="">
+                                <textarea name="message" placeholder="Mensagem"
+                                          data-constraints="@NotEmpty"></textarea>
+                            </label>
+
+                            <div class="mfControls">
+                                <button class="btn btn-md btn-primary material-icons-email" type="submit">Garantir meu Desconto
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!--End RD Mailform-->
+                </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--========================================================
+                              CONTENT
+    =========================================================-->
+    <main>
+        <section class="bg-default-variant-1 cbp-so-section" id="about">
+            <div class="container" style="padding-top: 30px;">
+                <div class="row">
+                    <div class="col-lg-5 inset-1 text-md-center cbp-so-side cbp-so-side-left">
+                        <h3 class="text-contrast">À vista Ganhe um curso online e +5%</h3>
+                        <h4 class="text-secondary-1">Neste Black Friday, cursos SAP e outros com 50% de desconto</h4>
+
+                        <p class="text-secondary-1"> Temos diversos cursos na área de ITIL, COBIT, Governança TI PMI PMP, Projetos, Negócios, BPM, BPMN, Iphone, IPAD, Android, ORACLE, Banco de dados, CISCO, CCNA, CCNP, EXCEL, ACCESS, OFFICE, Microsoft, Segurança de TI, JAVA, Marketing Digital, SEO. </p>
+                    </div>
+                    <div class="col-lg-7 cbp-so-side cbp-so-side-right">
+                        <!--thumb-wrap-->
+                        <div class="thumb-wrap">
+                            <!--thumb-->
+                            <p class="thumb" style="top:20px">
+                                <img src="images/page-1_img01.jpg" alt=""/>
+                            </p>
+                            <!--end thumb-->
+                            <!--thumb-->
+                             <p class="thumb">
+                                <img src="images/page-1_img02.jpg" alt=""/>
+                            </p>
+                            <!--end thumb-->
+                            <!--thumb-->
+                             <p class="thumb">
+                                <img src="images/page-1_img03.jpg" alt=""/>
+                            </p>
+                            <!--end thumb-->
+                        </div>
+                        <!--thumb-wrap-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="well" id="classes">
+            <div class="container text-xs-center">
+                <h2 class="text-contrast text-md-center">Cursos Profissionalizantes</h2>
+
+                <div class="row cbp-so-section">
+                    <div class="col-md-4 col-sm-4 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--product-->
+                        <div class="product">
+                            <div class="product_caption arrow arrow--pos-bottom">
+                                <h5 class="text-primary">Curso de SAP R/3 Foundations <span class="desconto"> 50%</span></h5>
+                                <h6>de R$ 2.490,00 por:<br/>
+                                6x <span class="large-preco"> R$ 207,50</span>
+                                </h6>
+
+                                <p>O objetivo do Curso SAP Funcional Foundations FI PP MM SD CO é Inserir o aluno na aplicação SAP R/3</p>
+                                <a href="http://www.trainning.com.br/cursos/curso-sap-funcional-foundation" class="btn btn-md btn-primary saiba-mais">Saiba Mais</a>
+                            </div>
+                            <div class="product_img">
+                                <div class="thumb">
+                                    <img src="images/page-1_img04.jpg" alt=""/>                             
+                                </div>
+                            </div>
+                        </div>
+                        <!--end product-->
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--product-->
+                        <div class="product">
+                            <div class="product_img">
+                                <div class="thumb">
+                                    <img src="images/page-1_img05.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="product_caption arrow arrow--pos-top">
+                                <h5 class="text-primary">Curso de ITIL V3 Foundations <span class="desconto"> 50%</span></h5>
+                                <h6>de R$ 890,00 por:<br/>
+                                6x <span class="large-preco"> R$ 74,16</span>
+                                </h6>
+
+                                <p>Depois que você obter a certificação ITIL V3 Foundation, você poderá fazer outros cursos intermediários ou os cursos avançados na ITIL v3 Expert.</p>
+                                <a href="http://www.trainning.com.br/cursos/curso-itil-v3-foundation" class="btn btn-md btn-primary saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                        <!--end product-->
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 cbp-so-side cbp-so-side-right">
+                        <!--product-->
+                        <div class="product">
+                            <div class="product_caption arrow arrow--pos-bottom">
+                                 <h5 class="text-primary">Curso de COBIT 5 Foundations <span class="desconto"> 50%</span></h5>
+                                <h6>de R$ 890,00 por:<br/>
+                                6x <span class="large-preco"> R$ 74,16</span>
+                                </h6>
+
+                                <p>COBIT 5 fornece um conjunto abrangente de medidas, indicadores, processos e objetivos de controle através de um amplo espectro de processos de TI.</p>
+                                <a href="http://www.trainning.com.br/cursos/curso-cobit-5-foundation" class="btn btn-md btn-primary saiba-mais">Saiba Mais</a>
+                            </div>
+                            <div class="product_img">
+                                <div class="thumb">
+                                    <img src="images/page-1_img06.jpg" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end product-->
+                    </div>
+                </div>
+                <!--product-->
+                <div class="row cbp-so-section">
+                    <div class="col-md-12 cbp-so-side cbp-so-side-left">
+                        <div class="product product--mod">
+                            <div class="product_caption arrow arrow--pos-right">
+                                <h5 class="text-primary">Formação Analista TI <span class="desconto"> 60%</span></h5>
+                                <h6>de R$ 6.850,00 por:<br/>
+                                6x <span class="large-preco"> R$ 456,67</span>
+                                </h6>
+
+                                <p style="margin-top:15px;">SAP R/3 Foundations - FI, CO, MM, PP, e SD, PMP Foundations, PMP Advanced, Analista de Negócios de TI com Base no Babok 2.0, ITIL V3 2011 Foundations.</p>
+                                <a href="http://www.trainning.com.br/formacao/formacao-ati-analista-ti" class="btn btn-md btn-primary saiba-mais">Saiba Mais</a>
+                            </div>
+                            <div class="product_img">
+                                <div class="thumb">
+                                    <img src="images/page-1_img07.jpg" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end product-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="well well--inset-1 bg-default-variant-1 text-xs-center cbp-so-section" id="events">
+            <div class="container">
+                <h2 class="text-contrast cbp-so-side cbp-so-side-left text-md-center">Calendário</h2>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-sap.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-11-23"><span class="day">23</span> <span class="month">NOV</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-sap-funcional-foundation">Curso SAP Funcional R/3 Foundations</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-right">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-itil.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-08"><span class="day">08</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-itil-v3-foundation">Curso ITIL V3 2011 Foundations</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+ <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-cobit.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-15"><span class="day">15</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-cobit-5-foundation">Curso Cobit 5 Foundation Oficial</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-right">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-ant.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-08"><span class="day">08</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-ant-bpm-analista-negocios-ti-babok">Curso Analista de Negócios de TI</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+<div style="clear:both; padding-bottom:50px;"> </div>
+
+ <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-bpmn.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-15"><span class="day">15</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-bpmn-analista-processos-negocios">Curso BPMN 2.0 - Analista de Processos de Negócios</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-right">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-ccna.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-07"><span class="day">07</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-cisco-ccna">Curso Cisco CCNA 200-120 Curso ICND 1 e 2 </a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+ <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-left">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-oracle.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-07"><span class="day">07</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/formacao/formacao-oracle-dba-11g">Formação Oracle DBA 11G</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-right">
+                        <!--post-->
+                        <div class="post">
+                            <div class="post_img">
+                                <div class="thumb">
+                                    <img src="images/cal-curso-ios.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="post_caption">
+                                <time datetime="2015-12-28"><span class="day">28</span> <span class="month">DEZ</span>
+                                </time>
+                                <div class="post_caption_cnt">
+                                    <h5><a href="http://www.trainning.com.br/cursos/curso-android-desenvolvedor-aplicativos">Curso Desenvolvedor de Aplicativos Android</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end post-->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        <section class="well well--inset-1">
+            <div class="container">
+                <h2 class="text-contrast text-md-center">what people say</h2>
+
+                <div class="row cbp-so-section">
+                    <div class="col-md-6 col-sm-12 cbp-so-side cbp-so-side-left">
+              
+                        <blockquote class="quote">
+                            <div class="quote_img">
+                                <img src="images/page-1_img10.jpg" alt="">
+                    
+                                <ul class="inline-list">
+                                    <li><a href="#" class="icon fa fa-facebook"></a></li>
+                                    <li><a href="#" class="icon fa fa-twitter "></a></li>
+                                    <li><a href="#" class="icon fa fa-google-plus"></a></li>
+                                </ul>
+                  
+                            </div>
+                            <div class="quote_cnt">
+                                <q>“It is a great place for beginners as well as advanced dancers with the variety of
+                                    classes they offer. The yearly recitals are always creative and entertaining for all
+                                    ages to watch. ”</q>
+                                <cite class="heading-6 text-primary ubold">Carol Patterson</cite>
+                            </div>
+                        </blockquote>
+                 
+                    </div>
+                    <div class="col-md-6 col-sm-12 cbp-so-side cbp-so-side-right">
+                    
+                        <blockquote class="quote">
+                            <div class="quote_img">
+                                <img src="images/page-1_img11.jpg" alt="">
+                           
+                                <ul class="inline-list">
+                                    <li><a href="#" class="icon fa fa-facebook"></a></li>
+                                    <li><a href="#" class="icon fa fa-google-plus"></a></li>
+                                </ul>
+                               
+                            </div>
+                            <div class="quote_cnt">
+                                <q>“My name is Helen and I love going to my class. We learn something new and exciting
+                                    every week, and my teacher is really nice. ”</q>
+                                <cite class="heading-6 text-primary ubold">Helen Wood</cite>
+                            </div>
+                        </blockquote>
+                     
+                    </div>
+                </div>
+                <div class="row cbp-so-section">
+                    <div class="col-md-6 col-sm-12 cbp-so-side cbp-so-side-left">
+                      
+                        <blockquote class="quote">
+                            <div class="quote_img">
+                                <img src="images/page-1_img12.jpg" alt="">
+                               
+                                <ul class="inline-list">
+                                    <li><a href="#" class="icon fa fa-facebook"></a></li>
+                                    <li><a href="#" class="icon fa fa-twitter "></a></li>
+                                </ul>
+                              
+                            </div>
+                            <div class="quote_cnt">
+                                <q>“This year I learned to do a backbend and rise and an Arabian. I really like the
+                                    costumes we get to wear for the recital. ”</q>
+                                <cite class="heading-6 text-primary ubold">Jeff Hayes</cite>
+                            </div>
+                        </blockquote>
+                    
+                    </div>
+                    <div class="col-md-6 col-sm-12 cbp-so-side cbp-so-side-right">
+                   
+                        <blockquote class="quote">
+                            <div class="quote_img">
+                                <img src="images/page-1_img13.jpg" alt="">
+                            
+                                <ul class="inline-list">
+                                    <li><a href="#" class="icon fa fa-twitter "></a></li>
+                                </ul>
+                            
+                            </div>
+                            <div class="quote_cnt">
+                                <q>“ like dancing because I really like to make new friends and I really like to learn
+                                    new dance moves! ”</q>
+                                <cite class="heading-6 text-primary ubold">EMI Powell</cite>
+                            </div>
+                        </blockquote>
+                     
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+       <!--  <section class="bg-default-variant-1 cbp-so-section" id="contacts">
+            <div class="container">
+                <div class="contact-form inset-2 pull-left pull-md-none cbp-so-side cbp-so-side-left">
+                    <h3 class="text-contrast">Get in touch</h3>
+
+                    <p class="text-secondary-1">For further information on classes, please fill in <br> the contact form
+                        below:</p>
+              
+                    <form class='mailform' method="post" action="bat/rd-mailform.php">
+                        <input type="hidden" name="form-type" value="contact"/>
+                        <fieldset>
+                            <label data-add-placeholder="">
+                                <input type="text"
+                                       name="name"
+                                       placeholder="your name"
+                                       data-constraints="@LettersOnly @NotEmpty"/>
+                            </label>
+
+                            <label data-add-placeholder="">
+                                <input type="text"
+                                       name="email"
+                                       placeholder="your email address"
+                                       data-constraints="@Email @NotEmpty"/>
+                            </label>
+
+                            <label class="phone" data-add-placeholder="">
+                                <input type="text"
+                                       name="phone"
+                                       placeholder="Your contact number"
+                                       data-constraints="@Phone"/>
+                            </label>
+
+                            <label class="textarea" data-add-placeholder="">
+                                <textarea name="message" placeholder="Message"
+                                          data-constraints="@NotEmpty"></textarea>
+                            </label>
+
+                            <div class="mfControls">
+                                <button class="btn btn-md btn-primary material-icons-email" type="submit">Submit
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                  
+                </div>
+             
+                <div class="map cbp-so-side cbp-so-side-right">
+                    <div id="google-map" class="map_model"></div>
+                    <ul class="map_locations">
+                        <li data-x="-73.9874068" data-y="40.643180">
+                            <p class="heading-6 text-primary text-center ubold capitalize title"> 9870 St Vincent <br>
+                                Place</p>
+                        </li>
+                    </ul>
+                </div>
+           
+            </div>
+        </section> -->
+    </main>
+
+    <!--========================================================
+                              FOOTER
+    =========================================================-->
+    <footer class="cbp-so-section text-xs-center">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 cbp-so-side cbp-so-side-left">
+                    <h4 class="text-secondary-1" style="margin-bottom: 20px; color: rgb(255, 255, 255);">Links Úteis</h4>
+                    <li id="menu-item-1280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1280"><a href="http://www.trainning.com.br/pagina/sobre-trainning">Sobre a Trainning</a></li>
+<li id="menu-item-1281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1281"><a href="http://www.trainning.com.br/pagina/localizacao">Localização </a></li>
+<li id="menu-item-1282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1282"><a href="http://www.trainning.com.br/pagina/clientes">Clientes</a></li>
+<li id="menu-item-1283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1283"><a href="http://www.trainning.com.br/pagina/depoimentos">Depoimentos</a></li>
+<li id="menu-item-1284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1284"><a href="http://www.trainning.com.br/pagina/consultoria" style="top: 0px;">Consultoria</a></li>
+<li id="menu-item-1285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1285"><a href="http://www.trainning.com.br/pagina/parceiros-desconto" style="top: 0px;">Parceiros com Descontos</a></li>
+
+
+<li id="menu-item-1286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1286"><a href="http://www.trainning.com.br/pagina/seja-parceiro">Seja Parceiro</a></li>
+
+            </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 cbp-so-side cbp-so-side-left">
+                    <h4 class="text-secondary-1" style="margin-bottom: 20px; color: rgb(255, 255, 255);">Telefones</h4>
+                   
+<div class="col-md-4 col-sm-4 col-xs-6">                    
+<p class="footer-txt"><strong>SÃO PAULO SEDE</strong><br/>
+(11) 3171-2002</p>
+
+<p class="footer-txt"><strong>RIO DE JANEIRO</strong><br/>
+(21) 4063-6518 (Cursos)<br/>
+(21) 3527-0033 (Locação de Salas)</p>
+
+<p class="footer-txt"><strong>BRASÍLIA</strong><br/>
+(61) 4063-7766</p>
+
+<p class="footer-txt"><strong>BELO HORIZONTE</strong><br/>
+(31) 4063-8187</p>
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-6">  
+<p class="footer-txt"><strong>CUIABÁ</strong><br/>
+(65) 3046-3200</p>
+
+<p class="footer-txt"><strong>VITÓRIA</strong><br/>
+(27) 4062-9192</p>
+
+<p class="footer-txt"><strong>CURITIBA</strong><br/>
+(41) 4063-8083</p>
+
+<p class="footer-txt"><strong>RECIFE</strong><br/>
+(81) 3092-6500</p>
+
+<p class="footer-txt"><strong>PORTO ALEGRE</strong><br/>
+(51) 4063-9474
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-6">  
+<p class="footer-txt"><strong>SALVADOR</strong><br/>
+(71) 4062-9323</p>
+
+<p class="footer-txt"><strong>FORTALEZA</strong><br/>
+(85) 4062-9171</p>
+
+<p class="footer-txt"><strong>GOIÂNIA</strong><br/>
+(62) 3412-9007
+Ramal 249</p>
+
+<p class="footer-txt"><strong>NATAL</strong><br/>
+(11) 3171-2002</p>
+
+<p class="footer-txt"><strong>MANAUS</strong><br/>
+(92) 3642-1539</p>
+</div>
+                </div>
+               
+                <div class="col-md-3 col-sm-6 col-xs-12 text-right text-sm-left text-xs-center offset cbp-so-side cbp-so-side-right">
+                    <!--Brand-->
+                    <div class="brand">
+                        <h1 class="brand_name">
+                            <a href="./"><img src="images/logo.png" alt=""></a>
+                        </h1>
+                    </div>
+                    <!--End Brand-->
+                    <div class="copyright cbp-so-side cbp-so-side-left text-secondary-1 uppercase">
+                        Av. Paulista, 2006, 16º andar - Metrô Consolação  
+                        <!-- {%FOOTER_LINK} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>
+<!--coded by photon-->
+</body>
+</html>

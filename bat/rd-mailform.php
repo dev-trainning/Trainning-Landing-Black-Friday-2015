@@ -1,6 +1,6 @@
 <?php
 
-$recipients = 'test@demolink.com';
+$recipients = 'comercial@trainning.com.br';
 //$recipients = '#';
 
 try {
@@ -21,16 +21,16 @@ try {
     if (isset($_POST['form-type'])) {
         switch ($_POST['form-type']){
             case 'contact':
-                $subject = 'A message from your site visitor';
+                $subject = 'Uma mensagem do seu visitante';
                 break;
             case 'subscribe':
-                $subject = 'Subscribe request';
+                $subject = 'Assinar pedido';
                 break;
             case 'order':
-                $subject = 'Order request';
+                $subject = 'Solicitação de pedido';
                 break;
             default:
-                $subject = 'A message from your site visitor';
+                $subject = 'Uma mensagem do seu visitante';
                 break;
         }
     }else{
@@ -49,7 +49,7 @@ try {
     if (isset($_POST['message'])) {
         $template = str_replace(
             ["<!-- #{MessageState} -->", "<!-- #{MessageDescription} -->"],
-            ["Message:", $_POST['message']],
+            ["Mensagem:", $_POST['message']],
             $template);
     }
 
@@ -89,8 +89,65 @@ try {
             }
         }
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     $mail->send();
+
+
+
+include "/conexao.php";	
+$nome = $_POST['name'];
+$email = $_POST['email'];
+$telefone = $_POST['phone'];
+$msg = $_POST['message'];
+
+	
+	
+$sql_carrossel = "SELECT * FROM recebe_vendedores where tipo ='outros' ORDER BY id DESC Limit 1";
+$res_carrossel = mysqlexecuta($idcon,$sql_carrossel);
+
+$nome_ultimo_vendedor = mysql_result($res_carrossel,0,"ultimo_vendedor");	 
+
+if ($nome_ultimo_vendedor == "Mario") {
+
+	$nome_proximo_vendedor = "Roberta";
+}
+elseif ($nome_ultimo_vendedor == "Roberta") {
+	$nome_proximo_vendedor = "Marcela";
+}
+elseif ($nome_ultimo_vendedor == "Marcela") {
+	$nome_proximo_vendedor = "Sandra";
+}
+elseif ($nome_ultimo_vendedor == "Sandra") {
+	$nome_proximo_vendedor = "Joyce";
+	
+}
+elseif ($nome_ultimo_vendedor == "Joyce") {
+	$nome_proximo_vendedor = "Thais";
+}
+elseif ($nome_ultimo_vendedor == "Thais") {
+	$nome_proximo_vendedor = "Mario";
+}
+
+$sql_carrossel_update = "UPDATE recebe_vendedores set ultimo_vendedor = '".$nome_proximo_vendedor."' where id = '1'";
+$res_carrossel_update = mysqlexecuta($idcon,$sql_carrossel_update);
+
+$sql_insert = "INSERT INTO recebe_info_curso (nome, email, telefone, msg, data, vendedor) Values ('$nome', '$email', '$telefone', '$msg', '".date("j/n/Y")."', '$nome_proximo_vendedor') ";
+$res_insert  = mysqlexecuta($idcon,$sql_insert);
+	
+	
+	
+	
+	
+	
 
     die('MF000');
 } catch (phpmailerException $e) {

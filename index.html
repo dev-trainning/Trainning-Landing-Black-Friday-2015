@@ -126,7 +126,7 @@ var google_remarketing_only = false;
                     <p class="text-secondary-1">Informe os dados abaixo para participar da promoção</p>
                     <div class="highlight"><h4 class="text-secondary-1 highlight-text">Cadastre-se</h4></div>
                     <!--RD Mailform-->
-                    <form class='mailform' method="post" action="bat/rd-mailform.php">
+                    <form class="mailform" method="post" action="bat/rd-mailform2.php">
                         <input type="hidden" name="form-type" value="contact"/>
                         <fieldset>
                             <label data-add-placeholder="">
@@ -154,6 +154,8 @@ var google_remarketing_only = false;
                                 <textarea name="message" id="message" placeholder="Mensagem"
                                           data-constraints="@NotEmpty"></textarea>
                             </label>
+                            <input type="hidden" name="strurl" id="strurl" value="" />
+                            
 
                             <div class="mfControls">
                                 <button class="btn btn-md btn-primary material-icons-email" type="submit">Garantir meu Desconto
@@ -690,7 +692,7 @@ var google_remarketing_only = false;
                                 <time datetime="2015-11-23"><span class="day">23</span> <span class="month">NOV</span>
                                 </time>
                                 <div class="post_caption_cnt">
-                                    <h5><a class="pegacurso" href="#form-landing">Curso de SAP HANA Foundations</a></h5>
+                                    <h5><a class="pegacurso" href="#form-landing" ref="http://www.trainning.com.br/cursos/curso-sap-hana-foundation">Curso de SAP HANA Foundations</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -710,7 +712,7 @@ var google_remarketing_only = false;
                                 <time datetime="2015-12-08"><span class="day">08</span> <span class="month">DEZ</span>
                                 </time>
                                 <div class="post_caption_cnt">
-                                    <h5><a class="pegacurso" href="#form-landing">Curso Analista de Negócios de TI</a></h5>
+                                    <h5><a class="pegacurso" href="#form-landing" ref="http://www.trainning.com.br/cursos/curso-ant-bpm-analista-negocios-ti-babok">Curso Analista de Negócios de TI</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -980,6 +982,8 @@ $(document).ready(function() {
 	$("a.pegacurso").click(function() {
 	 $("textarea#message").val($(this).text());
 	 $("textarea#message").focus();
+	 
+	 $("input#strurl").val($(this).attr('ref'));
 	 
               // var thought = $(this).text();
               //  alert(thought);

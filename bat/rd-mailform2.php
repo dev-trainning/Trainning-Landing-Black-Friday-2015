@@ -1,20 +1,16 @@
 <?php
 
+
+include "/conexao.php";	
+$nome = $_POST['name'];
+$email = $_POST['email'];
+$telefone = $_POST['phone'];
+$msg = $_POST['message'];
+
+
 $recipients = 'webmaster@trainning.com.br';
 //$recipients = '#';
 
-try {
-    require './phpmailer/PHPMailerAutoload.php';
-
-    preg_match_all("/([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)/", $recipients, $addresses, PREG_OFFSET_CAPTURE);
-
-    if (!count($addresses[0])) {
-        die('MF001');
-    }
-
-    if (preg_match('/^(127\.|192\.168\.)/', $_SERVER['REMOTE_ADDR'])) {
-        die('MF002');
-    }
 
     $template = file_get_contents('rd-mailform.tpl');
 
@@ -34,7 +30,7 @@ try {
                 break;
         }
     }else{
-        die('MF004');
+        
     }
 
     if (isset($_POST['email'])) {
@@ -43,7 +39,7 @@ try {
             ["Email:", $_POST['email']],
             $template);
     }else{
-        die('MF003');
+      
     }
 
     if (isset($_POST['message'])) {
@@ -70,44 +66,19 @@ try {
         [$subject, $_SERVER['SERVER_NAME']],
         $template);
 
-    $mail = new PHPMailer();
-    $mail->From = $_SERVER['SERVER_ADDR'];
-    $mail->FromName = $_SERVER['SERVER_NAME'];
+    
 
-    foreach ($addresses[0] as $key => $value) {
-        $mail->addAddress($value[0]);
-    }
-
-    $mail->CharSet = 'utf-8';
-    $mail->Subject = $subject;
-    $mail->MsgHTML($template);
-
-    if (isset($_FILES['attachment'])) {
-        foreach ($_FILES['attachment']['error'] as $key => $error) {
-            if ($error == UPLOAD_ERR_OK) {
-                $mail->AddAttachment($_FILES['attachment']['tmp_name'][$key], $_FILES['Attachment']['name'][$key]);
-            }
-        }
-    }
-	
-	
-	
-	
-	
-	
-	
+    // ENVIA PARA CONSULTOR TRAINNING
+$headers = "MIME-Version: 1.1\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+$headers .= "Reply-To: $nome <".$email.">\r\n"; // Reply-To
+$assunto = $nome_proximo_vendedor." - Cadastro Black Friday";
+$envio = mail("webmaster@trainning.com.br", "$assunto", "$template", $headers);
+ 
 	
 	
 
-    $mail->send();
 
-
-
-include "/conexao.php";	
-$nome = $_POST['name'];
-$email = $_POST['email'];
-$telefone = $_POST['phone'];
-$msg = $_POST['message'];
 
 	
 	
@@ -144,16 +115,14 @@ $sql_insert = "INSERT INTO recebe_info_curso (nome, email, telefone, msg, data, 
 $res_insert  = mysqlexecuta($idcon,$sql_insert);
 	
 	$strurl = $_POST['strurl'];
-	
-	echo "<script>alert('Cadastrado no Black Friday, agora INSCREVA-SE no curso desejado.'); location='" .$strurl. "';</script>";
-	
-	
 
-    die('MF000');
-} catch (phpmailerException $e) {
-    die('MF254');
-} catch (Exception $e) {
-    die('MF255');
+if($strurl){
+	
 }
-
+else {
+$strurl = "inscreva-se.php"	;
+}
 ?>
+<script type="text/javascript">alert('Cadastrado no Black Friday, agora INSCREVA-SE no curso desejado.'); location = '<?php echo $strurl; ?>'</script>
+
+
